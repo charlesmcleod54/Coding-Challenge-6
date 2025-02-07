@@ -23,3 +23,27 @@ const calculateSalesTax = function(amount, taxRate) {
 // Test data
 console.log(calculateSalesTax(100, 0.07));
 console.log(calculateSalesTax(500, 0.1));
+
+// Task 3
+// Write an arrow function
+const calculateBonus = (salary, performanceRating) => {
+    let bonusPercentage;
+
+    if (performanceRating === "Excellent") {
+        bonusPercentage = 0.20;
+    } else if (performanceRating === "Good") {
+        bonusPercentage = 0.10;
+    } else if (performanceRating === "Average") {
+        bonusPercentage = 0.05;
+    } else {
+        return "Invalid performance rating";
+    }
+
+    const bonus = salary * bonusPercentage;
+
+    return 'Bonus: $${bonus}';
+};
+
+// Test data
+console.log(calculateBonus(5000, "Excellent"));
+console.log(calculateBonus(7000, "Good"));
