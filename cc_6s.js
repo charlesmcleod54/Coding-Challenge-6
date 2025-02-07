@@ -85,3 +85,15 @@ function convertCurrency(amount, exchangeRate) {
 // Test data
 console.log(convertCurrency(100, 1.1));
 console.log(convertCurrency(250, 0.85));
+
+// Task 6
+// Declare an array of orders
+let orders = [200, 600, 1200, 450, 800];
+
+function applyBulkDiscount(orders, discountFunction) {
+    return orders.map(discountFunction);
+}
+
+const discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+
+console.log(discountedOrders);
